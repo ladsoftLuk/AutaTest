@@ -21,7 +21,6 @@ consume:
 
 install:
 	$(de) php74-container composer update -n
-	$(de) php74-container composer install -n
 	$(sy) doctrine:migrations:migrate -q
 	$(sy) doctrine:schema:validate -q
 
