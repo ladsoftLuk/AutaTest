@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block title %}Image downloader{% endblock %}
+
+{% block body %}
+    <h2>Download your imager from URL list</h2>
+    {{form(form)}}
+       {#} {% if info is empty %}
+            {% else %}
+            <h5>Errors:</h5>
+            <ul>
+            {% for item in info %}
+                <li>
+                    {{item.txt}} - {{item.url}}
+                </li>
+            {% endfor %}
+            </ul>
+        {% endif %}<h3>Good luck<h3>#}
+    
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Image downloader{% endblock %}
+
+    {% block head %} <script src={{asset('app.js')}}></script>{% endblock %}
+
+
+{% block body %}
+
+   <div id='current'>Current task:{{test}}</div>
+  
+   
+{% endblock %}
