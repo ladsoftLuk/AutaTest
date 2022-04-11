@@ -20,6 +20,7 @@ consume:
 	$(sy) messenger:consume async -vv
 
 install:
+	docker-compose up -d --build
 	$(de) php74-container composer update -n
 	$(sy) doctrine:migrations:migrate -q
 	$(sy) doctrine:schema:validate -q
